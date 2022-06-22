@@ -1,4 +1,4 @@
-module github.com/penglongli/gin-metrics
+module github.com/yubowen0525/gin-metrics
 
 go 1.16
 
