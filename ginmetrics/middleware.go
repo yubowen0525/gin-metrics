@@ -70,7 +70,7 @@ func (m *Monitor) initGinMetrics() {
 		Type:        Counter,
 		Name:        metricURIRequestTotal,
 		Description: "all the server received request num with every uri.",
-		Labels:      []string{"uri", "method", "status"},
+		Labels:      []string{"uri", "method", "code"},
 	})
 	_ = monitor.AddMetric(&Metric{
 		Type:        Counter,
@@ -88,7 +88,7 @@ func (m *Monitor) initGinMetrics() {
 		Type:        Histogram,
 		Name:        metricRequestDuration,
 		Description: "the time server took to handle the request.",
-		Labels:      []string{"uri", "method", "status"},
+		Labels:      []string{"uri", "method", "code"},
 		Buckets:     m.reqDuration,
 	})
 	_ = monitor.AddMetric(&Metric{
